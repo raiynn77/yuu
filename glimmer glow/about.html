@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Glimmer Glow</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Playfair Display', serif;
+            background-image: url(8.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: #333;
+            margin: 0;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #88356c;
+            margin-top: 1rem;
+        }
+
+        /* Navigation Bar */
+        .nav {
+            background-color: rgba(136, 53, 108, 0.8);
+            padding: 1rem;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .nav button {
+            background-color: rgba(133, 16, 88, 0.9);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-size: 1rem;
+            border-radius: 15px; /* Rounded edges */
+        }
+
+        .nav button:hover {
+            background-color: #501746;
+        }
+
+        .cart-icon {
+            font-size: 1.2rem;
+            color: white;
+            position: relative;
+            text-decoration: none;
+        }
+
+        .cart-icon::after {
+            content: attr(data-count);
+            font-size: 0.8rem;
+            color: white;
+            background-color: orange;
+            border-radius: 50%;
+            padding: 2px 5px;
+            position: absolute;
+            top: -8px;
+            right: -10px;
+        }
+
+        /* About Us Section */
+        .about-us {
+            max-width: 800px;
+            background-color: rgba(255, 255, 255, 0.8);
+            margin: 2rem auto;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .about-us h2 {
+            color: #88356c;
+            font-size: 2em;
+        }
+
+        .about-us p {
+            line-height: 1.6;
+            font-size: 1.1rem;
+            color: #333;
+            text-align: justify;
+        }
+
+        /* Logo */
+        .logo {
+            position: absolute; /* Absolute positioning */
+            top: 10px; /* 10px from the top */
+            left: 10px; /* 10px from the left */
+            z-index: 1000; /* Ensure it's on top of other content */
+        }
+
+        .logo img {
+            width: 80px;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Logo -->
+    <div class="logo">
+        <img src="100.png" alt="Logo">
+    </div>
+
+    <h1>Glimmer Glow</h1>
+
+    <!-- Navigation Bar -->
+    <div class="nav">
+        <button onclick="window.location.href='index.html'">Home</button>
+        <button onclick="window.location.href='shop.html'">Shop</button>
+        <button onclick="window.location.href='about.html'">About Us</button>
+        <button onclick="window.location.href='company.html'">Company</button>
+        <a href="cart.html" class="cart-icon" title="View Cart" data-count="0">&#128722;</a>
+    </div>
+
+    <!-- About Us Content -->
+    <div class="about-us">
+        <h2>About Us</h2>
+        <p>
+            Welcome to Glimmer Glow! Our mission is to empower individuals by offering high-quality, beautiful makeup products that 
+            bring a touch of elegance and confidence to your daily routine. Our team is passionate about beauty, inclusivity, and 
+            innovation, constantly striving to deliver the best to our customers.
+        </p>
+        <p>
+            Glimmer Glow was founded with a vision to celebrate diversity in beauty. From blushes that bring a radiant glow to your cheeks 
+            to lipsticks that make a statement, we aim to inspire confidence in everyone. Our products are crafted with quality ingredients, 
+            ensuring a flawless look while being gentle on the skin.
+        </p>
+    </div>
+</body>
+
+</html>

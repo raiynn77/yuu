@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - Glimmer Glow</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Playfair Display', serif;
+            background-image: url(67676.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: #333;
+            margin: 0;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #88356c;
+            margin-top: 1rem;
+        }
+
+        /* Logo */
+        .logo {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+
+        .logo img {
+            width: 80px;
+            height: auto;
+        }
+
+        /* Navigation Bar */
+        .nav {
+            background-color: rgba(136, 53, 108, 0.8);
+            padding: 1rem;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            position: relative;
+        }
+
+        .nav button {
+            background-color: rgba(133, 16, 88, 0.9);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-size: 1rem;
+            border-radius: 15px; /* Rounded edges */
+        }
+
+        .nav button:hover {
+            background-color: #501746;
+        }
+
+        /* Cart Icon */
+        .cart-icon {
+            color: white;
+            font-size: 1.5rem;
+            text-decoration: none;
+            position: relative;
+        }
+
+        .cart-icon::after {
+            content: attr(data-count);
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            background-color: orange;
+            color: white;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 0.8rem;
+        }
+        /* Products Section */
+        .category {
+            margin: 20px 0;
+            border-radius: 5px;
+            padding: 10px;
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+
+        .category h2 {
+            color: #88356c;
+            margin: 10px 0;
+        }
+
+        .products {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 10px;
+            gap: 1rem;
+        }
+
+        .product {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 5px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            width: 200px;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .product img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="color: beige;">Glimmer Glow</h1>
+
+    <!-- Logo -->
+    <div class="logo">
+        <img src="100.png" alt="Logo">
+    </div>
+
+    <!-- Navigation Bar -->
+    <div class="nav">
+        <button onclick="window.location.href='index.html'">Home</button>
+        <button onclick="window.location.href='shop.html'">Shop</button>
+        <button onclick="window.location.href='about.html'">About Us</button>
+        <button onclick="window.location.href='company.html'">Company</button>
+        <a href="cart.html" class="cart-icon" title="View Cart" data-count="0">&#128722;</a>
+    </div>
+
+   <!-- Eyes Category -->
+<div class="category">
+    <h2>Eyes</h2>
+    <div class="products">
+        <div class="product">
+            <img src="2.webp" alt="Velvet Ember">
+            <h3>Velvet Ember</h3>
+            <p>Price: ₱1400</p> 
+            <button class="add-to-cart" onclick="addToCart('Velvet Ember', 1400, '1.webp')">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="7.webp" alt="Shimmer Pearl">
+            <h3>Shimmer Pearl</h3>
+            <p>Price: ₱840</p>
+            <button class="add-to-cart" onclick="addToCart('Shimmer Pearl', 840, '2.webp')">Add to Cart</button>
+        </div>
+    </div>
+</div>
+
+<!-- Face Category -->
+<div class="category">
+    <h2>Face</h2>
+    <div class="products">
+        <div class="product">
+            <img src="12.webp" alt="Radiant Rose">
+            <h3>Radiant Rose</h3>
+            <p>Price: ₱1680</p>
+            <button class="add-to-cart" onclick="addToCart('Radiant Rose', 1680, '4.webp')">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="1.webp" alt="Blush Reverie">
+            <h3>Blush Reverie</h3>
+            <p>Price: ₱1120</p>
+            <button class="add-to-cart" onclick="addToCart('Blush Reverie', 1120, '5.jpg')">Add to Cart</button>
+        </div>
+    </div>
+</div>
+
+<!-- Lips Category -->
+<div class="category">
+    <h2>Lips</h2>
+    <div class="products">
+        <div class="product">
+            <img src="6.webp" alt="Satin Stroke">
+            <h3>Satin Stroke</h3>
+            <p>Price: ₱1008</p>
+            <button class="add-to-cart" onclick="addToCart('Satin Stroke', 1008, '6.webp')">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="10.jpg" alt="Graceful Whisper">
+            <h3>Graceful Whisper</h3>
+            <p>Price: ₱1232</p>
+            <button class="add-to-cart" onclick="addToCart('Graceful Whisper', 1232, '7.webp')">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="8.jpg" alt="Graceful Bloom">
+            <h3>Graceful Bloom</h3>
+            <p>Price: ₱840</p>
+            <button class="add-to-cart" onclick="addToCart('Graceful Bloom', 840, '7.webp')">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="11.jpg" alt="Graceful Shine">
+            <h3>Graceful Shine</h3>
+            <p>Price: ₱560</p>
+            <button class="add-to-cart" onclick="addToCart('Graceful Shine', 560, '7.webp')">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="3.webp" alt="Graceful Aura">
+            <h3>Graceful Aura</h3>
+            <p>Price: ₱672</p>
+            <button class="add-to-cart" onclick="addToCart('Graceful Aura', 672, '7.webp')">Add to Cart</button>
+        </div>
+    </div>
+</div>
+
+<!-- Accessories Category -->
+<div class="category">
+    <h2>Accessories</h2>
+    <div class="products">
+        <div class="product">
+            <img src="9.webp" alt="Petal Kiss">
+            <h3>Petal Kiss</h3>
+            <p>Price: ₱560</p>
+            <button class="add-to-cart" onclick="addToCart('Petal Kiss', 560, '8.jpg')">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="5.jpg" alt="Silken Glow">
+            <h3>Silken Glow</h3>
+            <p>Price: ₱672</p>
+            <button class="add-to-cart" onclick="addToCart('Silken Glow', 672, '9.webp')">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="10.jpg" alt="Amber Flush">
+            <h3>Amber Flush</h3>
+            <p>Price: ₱560</p>
+            <button class="add-to-cart" onclick="addToCart('Amber Flush', 560, '9.webp')">Add to Cart</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    let cart = [];
+
+    function addToCart(name, price, image) {
+        cart.push({ name, price, image });
+        updateCartCount();
+        alert(`${name} has been added to your cart!`);
+    }
+
+    function updateCartCount() {
+        const cartIcon = document.querySelector('.cart-icon');
+        cartIcon.setAttribute('data-count', cart.length);
+        localStorage.setItem('cart', JSON.stringify(cart));
+    }
+
+    // Load cart from local storage on page load
+    window.onload = function() {
+        const storedCart = localStorage.getItem('cart');
+        if (storedCart) {
+            cart = JSON.parse(storedCart);
+            updateCartCount();
+        }
+    };
+</script>
+
+</body>
+
+</html>

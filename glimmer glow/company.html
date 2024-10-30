@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company - Glimmer Glow</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Playfair Display', serif;
+            background-image: url(kkkk.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: #333;
+            margin: 0;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #88356c;
+            margin-top: 1rem;
+        }
+
+        /* Navigation Bar */
+        .nav {
+            background-color: rgba(136, 53, 108, 0.8);
+            padding: 1rem;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+        }
+
+        .nav button {
+            background-color: rgba(133, 16, 88, 0.9);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-size: 1rem;
+            border-radius: 15px; /* Rounded edges */
+        }
+
+        .nav button:hover {
+            background-color: #501746;
+        }
+
+        .cart-icon {
+            font-size: 1.2rem;
+            color: white;
+            position: relative;
+            text-decoration: none;
+        }
+
+        .cart-icon::after {
+            content: attr(data-count);
+            font-size: 0.8rem;
+            color: white;
+            background-color: orange;
+            border-radius: 50%;
+            padding: 2px 5px;
+            position: absolute;
+            top: -8px;
+            right: -10px;
+        }
+
+        /* Company Section */
+        .company-section {
+            max-width: 800px;
+            background-color: rgba(255, 255, 255, 0.8);
+            margin: 2rem auto;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .company-section h2 {
+            color: #88356c;
+            font-size: 2em;
+        }
+
+        .company-section p {
+            line-height: 1.6;
+            font-size: 1.1rem;
+            color: #333;
+            text-align: justify;
+        }
+
+        /* Values Section */
+        .values {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin-top: 1.5rem;
+            gap: 1rem;
+        }
+
+        .value-item {
+            width: 200px;
+            padding: 1rem;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .value-item h3 {
+            font-size: 1.2rem;
+            color: #88356c;
+            margin-top: 0.5rem;
+        }
+
+        .value-item p {
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        /* Logo */
+        .logo {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+
+        .logo img {
+            width: 80px;
+            height: auto;
+        }
+    </style>
+</head>
+    <!-- Logo -->
+    <div class="logo">
+        <img src="100.png" alt="Logo">
+    </div>
+    </style>
+</head>
+
+<body>
+    <h1 style="color: white;">Glimmer Glow</h1>
+
+    <!-- Navigation Bar -->
+    <div class="nav">
+        <button onclick="window.location.href='index.html'">Home</button>
+        <button onclick="window.location.href='shop.html'">Shop</button>
+        <button onclick="window.location.href='about.html'">About Us</button>
+        <button onclick="window.location.href='company.html'">Company</button>
+        <a href="cart.html" class="cart-icon" title="View Cart" data-count="0">&#128722;</a>
+    </div>
+
+    <!-- Company Content -->
+    <div class="company-section">
+        <h2>Our Company</h2>
+        <p>
+            Glimmer Glow is a leading beauty brand dedicated to creating high-quality, innovative makeup products that cater 
+            to all individuals. Established with a commitment to inclusivity and quality, we aim to inspire confidence and 
+            bring out the natural beauty in everyone. Our journey began with a passion for beauty and a mission to redefine 
+            the makeup industry.
+        </p>
+        <p>
+            With an emphasis on sustainability and community, Glimmer Glow values transparency in every product we create. 
+            From ethically-sourced ingredients to environmentally-friendly packaging, we strive to make a positive impact on 
+            both our customers and the world.
+        </p>
+
+        <!-- Values Section -->
+        <h2>Our Values</h2>
+        <div class="values">
+            <div class="value-item">
+                <h3>Quality</h3>
+                <p>We believe in delivering makeup that meets the highest standards, ensuring a premium experience for our customers.</p>
+            </div>
+            <div class="value-item">
+                <h3>Inclusivity</h3>
+                <p>Our products are designed for everyone, celebrating diversity and embracing all beauty.</p>
+            </div>
+            <div class="value-item">
+                <h3>Sustainability</h3>
+                <p>We are committed to eco-friendly practices, using sustainable materials and minimizing waste.</p>
+            </div>
+            <div class="value-item">
+                <h3>Innovation</h3>
+                <p>Through continuous research, we create cutting-edge products that set new standards in beauty.</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

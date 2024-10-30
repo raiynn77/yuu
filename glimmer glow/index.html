@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glimmer Glow</title>
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Playfair Display', serif;
+            background-image: url(hhhh.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: #333;
+            margin: 0;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #88356c;
+            margin-top: 1rem;
+        }
+
+        /* Navigation Bar */
+        .nav {
+            background-color: rgba(136, 53, 108, 0.8);
+            padding: 1rem;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            position: relative;
+        }
+
+        .nav button {
+            background-color: rgba(133, 16, 88, 0.9);
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-size: 1rem;
+            border-radius: 15px; /* Rounded edges */
+        }
+
+        .nav button:hover {
+            background-color: #501746;
+        }
+
+        /* Cart Icon */
+        .cart-icon {
+            color: white;
+            font-size: 1.5rem;
+            text-decoration: none;
+            position: relative;
+        }
+
+        .cart-icon::after {
+            content: attr(data-count);
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            background-color: orange;
+            color: white;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 0.8rem;
+        }
+
+        /* Slider */
+        .slider {
+            position: relative;
+            max-width: 80%;
+            margin: 20px auto;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .slides {
+            display: none;
+        }
+
+        .slider img {
+            width: 100%;
+            height: auto;
+        }
+
+        /* Slider Arrows */
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            padding: 12px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 3px;
+            user-select: none;
+        }
+
+        .prev {
+            left: 10px;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .next {
+            right: 10px;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .prev:hover,
+        .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Dots */
+        .dot-container {
+            text-align: center;
+            padding-top: 10px;
+        }
+
+        .dot {
+            height: 15px;
+            width: 15px;
+            margin: 5px 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+            cursor: pointer;
+        }
+
+        .active {
+            background-color: #88356c;
+        }
+
+        /* Welcome Text */
+        .welcome-text {
+            padding: 1rem 2rem;
+            max-width: 800px;
+            margin: auto;
+            line-height: 1.6;
+            text-align: justify;
+            font-size: 1.1rem;
+            color: #333;
+            background-color: rgba(255, 255, 255, 0.8); /* Transparent white background */
+            border-radius: 10px; /* Optional: rounded corners */
+        }
+
+        /* Logo */
+        .logo {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+
+        .logo img {
+            width: 80px;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="color: white;">Glimmer Glow</h1>
+
+    <!-- Logo -->
+    <div class="logo">
+        <img src="100.png" alt="Logo">
+    </div>
+
+    <!-- Navigation Bar -->
+    <div class="nav">
+        <button onclick="window.location.href='index.html'">Home</button>
+        <button onclick="window.location.href='shop.html'">Shop</button>
+        <button onclick="window.location.href='about.html'">About Us</button>
+        <button onclick="window.location.href='company.html'">Company</button>
+        <a href="cart.html" class="cart-icon" title="View Cart" data-count="0">&#128722;</a>
+    </div>
+
+    <!-- Slider Section -->
+    <div class="slider">
+        <div class="slides">
+            <img src="jjjj.png" alt="Image 1">
+        </div>
+        <div class="slides">
+            <img src="kkkk.jpg" alt="Image 2">
+        </div>
+        <div class="slides">
+            <img src="sss.png" alt="Image 3">
+        </div>
+        <div class="slides">
+            <img src="8d6dfdb7-1989-45ed-a96e-9206ad54ab08 (2).jpg" alt="Image 4">
+        </div>
+        <div class="slides">
+            <img src="ffff.png" alt="Image 5">
+        </div>
+        <div class="slides">
+            <img src="p.jpg" alt="Image 6">
+        </div>
+        <div class="slides">
+            <img src="t.jpg" alt="Image 7">
+        </div>
+        <div class="slides">
+            <img src="y.jpg" alt="Image 8">
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+
+    <div class="dot-container">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+    </div>
+
+    <div class="welcome-text">
+        Welcome to Glimmer Glow, where beauty meets brilliance! At Glimmer Glow, we believe makeup is more than a
+        routine; it’s a ritual of self-expression, empowerment, and joy. Our mission is to bring you carefully curated,
+        high-quality makeup products that enhance your natural radiance and celebrate your unique style. Each product
+        in our collection is crafted to inspire confidence and provide luxurious quality at an accessible price. From
+        vibrant shades to subtle tones, Glimmer Glow has something for every mood and occasion. Thank you for choosing
+        Glimmer Glow. Here’s to shining brighter, every day!
+    </div>
+
+    <script>
+        let slideIndex = 0;
+        let autoSlideTimeout;
+
+        function showSlides() {
+            let i;
+            let slides = document.getElementsByClassName("slides");
+            let dots = document.getElementsByClassName("dot");
+
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slideIndex++;
+            if (slideIndex > slides.length) {
+                slideIndex = 1;
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+
+            autoSlideTimeout = setTimeout(showSlides, 3000); // Change slide every 3 seconds
+        }
+
+        function plusSlides(n) {
+            clearTimeout(autoSlideTimeout); // Stop auto sliding when manual navigation is used
+            slideIndex += n - 1;
+            showSlides();
+        }
+
+        function currentSlide(n) {
+            clearTimeout(autoSlideTimeout); // Stop auto sliding when manual navigation is used
+            slideIndex = n - 1;
+            showSlides();
+        }
+
+        // Initialize slider on page load
+        showSlides();
+    </script>
+
+</body>
+
+</html>
